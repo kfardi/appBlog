@@ -2,17 +2,17 @@
                 'list-group-item-success': loveIts > 0,
                 'list-group-item-danger': 0 > loveIts}" >
 
-<h2>{{title}}</h2>
-<div>
+<h2 style="display: inline;">{{title}}</h2>
+<div class="createdat">
     <span class="glyphicon glyphicon-time"></span> 
-    {{createdAt | date:'dd/MM/yyyy HH:mm a ' | uppercase}}
+    {{createdAt | date:'dd/MM/yyyy, HH:mm a ' | uppercase}}
 </div>
-<p>{{content}}</p>
+<p class="content">{{content}}</p>
 <button type="button" class="btn btn-success" (click)="onlike()">
     love it 
     <span class="glyphicon glyphicon-thumbs-up"></span>
 </button>
-<button type="button" class="btn btn-danger" (click)="onDislike()">
+<button type="button" class="btn btn-danger ml" (click)="onDislike()"> 
     don't love it 
     <span class="glyphicon glyphicon-thumbs-down"></span>
 </button>
